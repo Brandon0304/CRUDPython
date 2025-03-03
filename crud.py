@@ -16,16 +16,6 @@ root.title("Gestión de Contactos")
 root.geometry("600x500")
 root.configure(bg="#f0f0f0")
 
-# Cargar imagen de fondo desde una URL
-url = "https://upload.wikimedia.org/wikipedia/commons/3/3b/Lana_Rhoades_cropped.jpg"
-response = requests.get(url)
-image_data = Image.open(BytesIO(response.content))
-image_data = image_data.resize((600, 500), Image.LANCZOS)
-bg_photo = ImageTk.PhotoImage(image_data)
-
-bg_label = tk.Label(root, image=bg_photo)
-bg_label.place(relwidth=1, relheight=1)
-
 font_title = ("Arial", 14, "bold")
 font_text = ("Arial", 11)
 
